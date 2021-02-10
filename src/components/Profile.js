@@ -9,12 +9,15 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Avatar from '@material-ui/core/Avatar';
 import pic from '../assets/profile.jpeg';
 import Divider from '@material-ui/core/Divider';
+import Fade from '@material-ui/core/Fade';
+import Slide from '@material-ui/core/Slide';
 
 
 function Profile(classes){
     return (
         <Grid container item direction="column" style={{flexGrow: 1}}>
             <Grid container item direction="row" className={classes.profileSubComponent}>
+                <Fade in={true} key={"profile_bod"} timeout={500}>
                 <Grid container item xs={6} direction="column" justify="center">
                     <Typography paragraph variant="body2">
                         Part-time undergraduate at the University of Wollongong, currently pursuing a Computer Science degree majoring in Big Data.
@@ -23,6 +26,7 @@ function Profile(classes){
                         Embraces the FOSS concept. Loves and is passionate at learning new things. Believes in utilizing technology to make a difference.
                     </Typography>
                 </Grid>
+                </Fade>
                 <Grid container item xs={6} direction="column" justify="center" alignItems="center">
                     <Avatar src={pic} className={classes.large} />
                     <Typography>Chua Zheng Tat</Typography>
@@ -44,23 +48,31 @@ function Profile(classes){
                 </Grid>
                 <Grid container item justify="space-around" spacing={3}>
                     <Grid container direction="column" item xs={6}>
+                        <Fade in={true} timeout={1000}>
                         <Typography paragraph variant="h6">
                             Languages:
                         </Typography>
+                        </Fade>
+                        <Fade in={true} timeout={1500}>
                         <Typography variant="body2">
                             Python (fluent), Java(proficient), Dart (prior experience),
                             Javascript (prior experience), PHP (prior experience), C++ (prior experience),
                             SQL (proficient), NoSQL (prior experience), Linux (proficient)
                         </Typography>
+                        </Fade>
                     </Grid>
                     <Grid container direction="column" item xs={6}>
+                        <Fade in={true} timeout={1000}>
                         <Typography paragraph variant="h6">
                             Frameworks & Software:
                         </Typography>
+                        </Fade>
+                        <Fade in={true} timeout={1500}>
                         <Typography variant="body2">
                             Flask, Selenium, Qt, scikit-learn, Tensorflow, JavaFx, Flutter,
                             React, NodeJS, Yii, Codeception, MySQL, OracleDB, SQLite, MongoDB, Vim
                         </Typography>
+                        </Fade>
                     </Grid>
                 </Grid>
             </Grid>

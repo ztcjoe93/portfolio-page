@@ -27,11 +27,11 @@ function Experience(classes, data){
                         <ul>
                         {datum["Tasks"].map((task) => { 
                             listPtr++;
-                            fadeInTimer += 50;
+                            fadeInTimer += 350;
                             return <li key={listPtr}>
-                                <Slide in={true} direction='left' timeout={fadeInTimer}>
+                                <Fade in={true} timeout={fadeInTimer}>
                                 <Typography variant="body2">{task}</Typography>
-                                </Slide>
+                                </Fade>
                             </li>;
                         })}
                         </ul>
